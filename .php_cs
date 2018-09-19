@@ -13,6 +13,7 @@ $rules = [
       'header' => $header,
       'location' => 'after_open'
     ],
+    'strict_param' => true,
 ];
 
 $finder = PhpCsFixer\Finder::create()
