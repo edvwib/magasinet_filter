@@ -35,7 +35,7 @@ function magazine_custom_column($column, $post_id)
         break;
         case 'cover':
         $cover = get_field('magazine_cover', $post_id)['sizes']['medium'];
-        echo '<img src="'. $cover .'" style="max-width: 100%"/>';
+        echo '<img src="'. $cover .'" style="max-width: 100%; max-height: 200px;"/>';
         break;
     }
 }

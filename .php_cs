@@ -20,5 +20,6 @@ $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__.'/wordplate/public/themes/filter');
 
 return PhpCsFixer\Config::create()
+    ->setRiskyAllowed(true)
     ->setRules($rules)
     ->setFinder($finder);
