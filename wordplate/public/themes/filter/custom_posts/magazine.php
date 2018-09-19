@@ -10,17 +10,25 @@
 declare(strict_types=1);
 
 register_extended_post_type('magazine', [
-    # Add some custom columns to the admin screen:
-    'admin_cols' => array(
-        'published' => array(
+    'admin_cols' => [
+        'published' => [
             'title'       => 'Publicerad',
             'meta_key'    => 'metadata_release',
             'date_format' => 'Y/m/d',
             'default'     => 'DESC',
-        ),
-    ),
-], [
-    'singular' => 'Magasin',
-    'plural'   => 'Magasin',
-    'slug'     => 'magasin'
+        ],
+    ],
+    'labels' => [
+        'name'          => __('Magasin'),
+        'menu_name' => __('Magasin'),
+        'singular_name' => __('Magasin'),
+        'plural_name' => __('Magasin'),
+        'all_items' => __('Alla magasin'),
+        'add_new_item' => __('Lägg till nytt magasin'),
+        'add_new' => __('Lägg till nytt magasin'),
+        'search_items' => __('Sök efter magasin'),
+        'edit_item' => __('Redigera magasin'),
+    ],
+    'rewrite'     => array( 'slug' => 'magasin' ),
+    'menu_icon' => 'dashicons-book-alt',
 ]);
