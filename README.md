@@ -1,5 +1,6 @@
 # Magasinet Filter
 A replacement website for [Magasinet Filter](https://magasinetfilter.se)
+<br>
 [![StyleCI](https://styleci.io/repos/147302076/shield?style=for-the-badge)](https://styleci.io/repos/147302076/)
 ## Setup
 1. Clone or download the repository and follow the steps below. You'll also need to have [Composer](https://getcomposer.org/) and [npm](https://www.npmjs.com/) installed for the following steps.
