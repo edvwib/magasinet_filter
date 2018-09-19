@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1c02d3c5cbcd1ddc1fc29351ae5b00d",
+    "content-hash": "acdc5df9dc48974d7344306c57a02629",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "049797d727261bf27f2690430d935067710049c2"
+                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/049797d727261bf27f2690430d935067710049c2",
-                "reference": "049797d727261bf27f2690430d935067710049c2",
+                "url": "https://api.github.com/repos/composer/installers/zipball/cfcca6b1b60bc4974324efb5783c13dca6932b5b",
+                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b",
                 "shasum": ""
             },
             "require": {
@@ -124,7 +124,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-12-29T09:13:20+00:00"
+            "time": "2018-08-27T06:10:37+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -195,16 +195,16 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.7.1",
+            "version": "v5.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "31112aa75ef2aadb9f4e6662d6b88ecde7a3e847"
+                "reference": "2daf3c078610f744e2a4dc2f44fb5060cce9835b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/31112aa75ef2aadb9f4e6662d6b88ecde7a3e847",
-                "reference": "31112aa75ef2aadb9f4e6662d6b88ecde7a3e847",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/2daf3c078610f744e2a4dc2f44fb5060cce9835b",
+                "reference": "2daf3c078610f744e2a4dc2f44fb5060cce9835b",
                 "shasum": ""
             },
             "require": {
@@ -235,27 +235,27 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2018-08-31T18:58:53+00:00"
+            "time": "2018-09-18T12:50:05+00:00"
         },
         {
             "name": "illuminate/support",
-            "version": "v5.7.1",
+            "version": "v5.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "800277753547b925c9442cc4f937e3daea39c1c5"
+                "reference": "bb579d7174181c343259933cac430869eada7edb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/800277753547b925c9442cc4f937e3daea39c1c5",
-                "reference": "800277753547b925c9442cc4f937e3daea39c1c5",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/bb579d7174181c343259933cac430869eada7edb",
+                "reference": "bb579d7174181c343259933cac430869eada7edb",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "^1.1",
                 "ext-mbstring": "*",
                 "illuminate/contracts": "5.7.*",
-                "nesbot/carbon": "^1.24.1",
+                "nesbot/carbon": "^1.26.3",
                 "php": "^7.1.3"
             },
             "conflict": {
@@ -263,6 +263,7 @@
             },
             "suggest": {
                 "illuminate/filesystem": "Required to use the composer class (5.7.*).",
+                "moontoast/math": "Required to use ordered UUIDs (^1.1).",
                 "ramsey/uuid": "Required to use Str::uuid() (^3.7).",
                 "symfony/process": "Required to use the composer class (^4.1).",
                 "symfony/var-dumper": "Required to use the dd function (^4.1)."
@@ -293,7 +294,53 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2018-08-29T10:50:44+00:00"
+            "time": "2018-09-16T20:37:01+00:00"
+        },
+        {
+            "name": "johnbillion/extended-cpts",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnbillion/extended-cpts.git",
+                "reference": "04c844eb6421a4a5fe90a76258acb513729092f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnbillion/extended-cpts/zipball/04c844eb6421a4a5fe90a76258acb513729092f9",
+                "reference": "04c844eb6421a4a5fe90a76258acb513729092f9",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "johnbillion/php-docs-standards": "^1.2",
+                "phpunit/phpunit": "^5.7",
+                "slevomat/coding-standard": "^4.0",
+                "wp-coding-standards/wpcs": "^0.13.0"
+            },
+            "suggest": {
+                "wpackagist-plugin/rewrite-testing": "Rewrite Rule Testing"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "extended-cpts.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John Blackbourn",
+                    "homepage": "https://johnblackbourn.com/"
+                }
+            ],
+            "description": "A library which provides extended functionality to WordPress custom post types and taxonomies.",
+            "homepage": "https://github.com/johnbillion/extended-cpts/",
+            "time": "2017-11-01T16:56:21+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -1072,38 +1119,99 @@
             "time": "2018-07-29T20:33:41+00:00"
         },
         {
-            "name": "wordplate/framework",
-            "version": "6.3.0",
+            "name": "wordplate/acf",
+            "version": "5.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wordplate/framework.git",
-                "reference": "599985b2f885c0b23bd3c14bb3c50b82a53b7171"
+                "url": "https://github.com/wordplate/acf.git",
+                "reference": "8acf493c002d55301a6c106ffae85fd49fd30ffb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wordplate/framework/zipball/599985b2f885c0b23bd3c14bb3c50b82a53b7171",
-                "reference": "599985b2f885c0b23bd3c14bb3c50b82a53b7171",
+                "url": "https://api.github.com/repos/wordplate/acf/zipball/8acf493c002d55301a6c106ffae85fd49fd30ffb",
+                "reference": "8acf493c002d55301a6c106ffae85fd49fd30ffb",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^1.5",
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "WordPlate\\Acf\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Klaiber",
+                    "email": "hello@vinkla.com",
+                    "homepage": "https://vinkla.com"
+                },
+                {
+                    "name": "Chris Andersson",
+                    "email": "hello@puredazzle.se",
+                    "homepage": "https://puredazzle.se"
+                }
+            ],
+            "description": "An Advanced Custom Fields helper for WordPlate",
+            "keywords": [
+                "acf",
+                "advanced",
+                "custom",
+                "fields",
+                "wordplate",
+                "wordpress"
+            ],
+            "time": "2018-04-04T12:11:21+00:00"
+        },
+        {
+            "name": "wordplate/framework",
+            "version": "6.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wordplate/framework.git",
+                "reference": "2d326233ee6ee5374aa90cdf3ae075a6fd038688"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wordplate/framework/zipball/2d326233ee6ee5374aa90cdf3ae075a6fd038688",
+                "reference": "2d326233ee6ee5374aa90cdf3ae075a6fd038688",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.6",
                 "ext-mbstring": "*",
-                "illuminate/support": "^5.6",
-                "johnpbloch/wordpress": "^4.9.6",
+                "illuminate/support": "^5.7",
+                "johnpbloch/wordpress": "^4.9.8",
                 "php": "^7.1.3",
                 "roots/wp-password-bcrypt": "^1.0",
                 "symfony/http-foundation": "^4.1",
                 "symfony/routing": "^4.1",
                 "symfony/var-dumper": "^4.1",
-                "vlucas/phpdotenv": "^2.4"
+                "vlucas/phpdotenv": "^2.5"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7.1"
+                "phpunit/phpunit": "^7.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.3-dev"
+                    "dev-master": "6.4-dev"
                 }
             },
             "autoload": {
@@ -1137,7 +1245,7 @@
                 "wordplate",
                 "wordpress"
             ],
-            "time": "2018-06-04T13:56:35+00:00"
+            "time": "2018-09-14T15:01:06+00:00"
         },
         {
             "name": "wordplate/plate",
