@@ -17,6 +17,7 @@ function add_acf_columns($columns)
 {
     return array_merge($columns, [
         'number' => __('Nummer'),
+        'cover' => __('Omslag'),
     ]);
 }
 add_filter('manage_magazine_posts_columns', 'add_acf_columns');
@@ -31,6 +32,10 @@ function magazine_custom_column($column, $post_id)
         case 'number':
         // echo get_post_meta ($post_id, 'number', true);
         the_field('metadata_number', $post_id);
+        break;
+        case 'cover':
+        $cover = get_field('magazine_cover', $post_id)['sizes']['medium'];
+        echo '<img src="'. $cover .'" style="max-width: 100%"/>';
         break;
     }
 }
