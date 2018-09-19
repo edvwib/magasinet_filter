@@ -81,5 +81,6 @@ acf_field_group([
     'location' => $location,
     'hide_on_screen' => [
         0 => 'the_content',
+        1 => 'featured_image',
     ],
 ]);

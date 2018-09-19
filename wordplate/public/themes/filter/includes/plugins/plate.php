@@ -9,22 +9,10 @@
 
 declare(strict_types=1);
 
-/*
-|--------------------------------------------------------------------------
-| Plate
-|--------------------------------------------------------------------------
-|
-| Plate provides a bunch of handy WordPress defaults to help you get the
-| most out of WordPress development.
-|
-| Please see https://github.com/wordplate/plate
-|
-*/
-
 // Disable sidebar menu items.
 add_theme_support('plate-disable-menu', [
     'edit-comments.php', // comments
-    'index.php', // dashboard
+    // 'index.php', // dashboard
     'upload.php', // media
 ]);
 
@@ -80,4 +68,4 @@ add_theme_support('plate-permalink', '/%postname%/');
 add_theme_support('plate-login-logo', asset('assets/images/logo.png'));
 
 // Set custom footer text.
-add_theme_support('plate-footer-text', 'Thank you for creating with <a href="https://wordplate.github.io">WordPlate</a>.');
+add_theme_support('plate-footer-text', '');
