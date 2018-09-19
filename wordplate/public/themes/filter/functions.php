@@ -59,5 +59,6 @@ add_filter('jpeg_quality', function () {
 add_action('init', function () {
     require_once template_path('custom_posts/index.php');
     require_once template_path('custom_fields/index.php');
+    require_once template_path('custom_taxonomies/index.php');
     require_once template_path('custom_admin_cols/index.php');
 });
