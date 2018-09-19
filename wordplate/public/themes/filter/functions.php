@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of Filter.
+ * (c) Magasinet Filter, Offside Press AB.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 declare(strict_types=1);
 
 // Register plugin helpers.
@@ -27,9 +34,10 @@ add_action('after_setup_theme', function () {
 });
 
 // Remove default post type from admin page
-add_action('admin_menu','remove_default_post_type');
-function remove_default_post_type() {
-	remove_menu_page('edit.php');
+add_action('admin_menu', 'remove_default_post_type');
+function remove_default_post_type()
+{
+    remove_menu_page('edit.php');
 }
 
 // Enqueue and register scripts the right way.
@@ -48,7 +56,7 @@ add_filter('jpeg_quality', function () {
 }, 10, 2);
 
 // Load custom fields and post types
-add_action('init', function() {
+add_action('init', function () {
     require_once template_path('custom_posts/index.php');
     require_once template_path('custom_fields/index.php');
     require_once template_path('custom_admin_cols/index.php');
