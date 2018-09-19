@@ -2,6 +2,6 @@ preset: psr2
 
 risky: true
 finder:
-  include:
-    - wordplate/public/themes/filter
+  path:
+    - "wordplate/public/themes/filter"
   name: "*.php"
