@@ -3,12 +3,11 @@
 declare(strict_types=1);
 
 // Register plugin helpers.
-require template_path('includes/plugins/plate.php');
+require_once template_path('includes/plugins/plate.php');
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {
-    // Disable the admin toolbar.
-    show_admin_bar(false);
+    show_admin_bar(true);
 
     // Add post thumbnails support.
     add_theme_support('post-thumbnails');
@@ -25,24 +24,32 @@ add_action('after_setup_theme', function () {
         'search-form',
         'widgets',
     ]);
-
-    // Register navigation menus.
-    register_nav_menus([
-        'navigation' => __('Navigation', 'wordplate'),
-    ]);
 });
+
+// Remove default post type from admin page
+add_action('admin_menu','remove_default_post_type');
+function remove_default_post_type() {
+	remove_menu_page('edit.php');
+}
 
 // Enqueue and register scripts the right way.
 add_action('wp_enqueue_scripts', function () {
     wp_deregister_script('jquery');
 
-    // wp_enqueue_style('wordplate', mix('styles/app.css'));
+    wp_enqueue_style('filter', mix('styles/app.css'));
 
-    // wp_register_script('wordplate', mix('scripts/app.js'), '', '', true);
-    // wp_enqueue_script('wordplate');
+    wp_register_script('filter', mix('scripts/app.js'), '', '', true);
+    wp_enqueue_script('filter');
 });
 
 // Remove JPEG compression.
 add_filter('jpeg_quality', function () {
     return 100;
 }, 10, 2);
+
+// Load custom fields and post types
+add_action('init', function() {
+    require_once template_path('custom_posts/index.php');
+    require_once template_path('custom_fields/index.php');
+    require_once template_path('custom_admin_cols/index.php');
+});
