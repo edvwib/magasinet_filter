@@ -1,2 +1,5 @@
-*
+/*
 !.gitignore
+!manifest.json
+!/manifest
+!favicon.ico
