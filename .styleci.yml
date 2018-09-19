@@ -5,5 +5,5 @@ finder:
   path:
     - "wordplate/public/themes/filter"
   name: "*.php"
-
-strict_param: true
+enabled:
+  - strict_param
