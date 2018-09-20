@@ -11,6 +11,9 @@ declare(strict_types=1);
 
 register_extended_post_type('article', [
     'admin_cols' => [
+        'published' => [
+
+        ],
     ],
     'labels' => [
         'name'          => __('Artikel'),

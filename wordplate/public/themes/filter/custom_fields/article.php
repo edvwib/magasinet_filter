@@ -52,7 +52,7 @@ $fields = [
             acf_relationship([
                 'name' => 'magazine',
                 'label' => 'Magasin',
-                'instructions' => 'Väld det magasin som artikeln publicerades i.',
+                'instructions' => 'Välj det magasin som artikeln publicerades i.',
                 'post_type' => ['magazine'],
                 'required' => true,
                 'filters' => '',

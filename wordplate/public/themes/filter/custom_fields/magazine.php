@@ -50,7 +50,7 @@ $fields = [
                 'instructions' => 'Det datum nummret släpptes.',
                 'required' => true,
                 'display_format' => 'Y/m/d',
-                'return_format' => 'd F Y',
+                'return_format' => 'Y/m/d',
             ]),
         ],
     ]),

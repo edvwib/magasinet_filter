@@ -13,14 +13,14 @@ declare(strict_types=1);
 /*
 * Add columns to magazine post list
 */
-function add_acf_columns($columns)
+function add_magazine_acf_columns($columns)
 {
     return array_merge($columns, [
         'number' => __('Nummer'),
         'cover' => __('Omslag'),
     ]);
 }
-add_filter('manage_magazine_posts_columns', 'add_acf_columns');
+add_filter('manage_magazine_posts_columns', 'add_magazine_acf_columns');
 
 
 /*
