@@ -65,7 +65,7 @@ add_theme_support('plate-disable-tabs', ['help', 'screen-options']);
 add_theme_support('plate-permalink', '/%postname%/');
 
 // Set custom login logo.
-add_theme_support('plate-login-logo', asset('assets/images/logo.png'));
+add_theme_support('plate-login-logo', asset('assets/manifest/icon-512x512.png'));
 
 // Set custom footer text.
 add_theme_support('plate-footer-text', '');
