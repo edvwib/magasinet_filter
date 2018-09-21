@@ -12,7 +12,8 @@
     "dependencies": {
         "cross-env": "^5.1.6",
         "dotenv": "^6.0.0",
-        "laravel-mix": "^2.1.11"
+        "laravel-mix": "^2.1.11",
+        "sanitize.css": "^7.0.3"
     },
     "browserslist": [
         ">0.25%",
