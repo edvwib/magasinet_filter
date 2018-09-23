@@ -11,3 +11,14 @@ if (process.env.NODE_ENV === 'production') {
     }
   });
 }
+
+// Article progress %
+let progressElement = document.querySelector('.articlePost .progress .value');
+if(progressElement){
+  let articleLength = document.querySelector('.articlePost').clientHeight;
+  window.addEventListener('scroll', () => {
+    // console.log(window.scrollY)
+    let percentProgress = Math.floor(((window.scrollY + window.innerHeight) / articleLength) * 100);
+    progressElement.textContent = percentProgress;
+  });
+}

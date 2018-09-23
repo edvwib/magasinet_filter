@@ -1,0 +1,76 @@
+.articlePost{
+  .headerImage{
+    img{
+      max-width: 100%;
+    }
+  }
+
+  article{
+    padding: 16px;
+
+    .metadata{
+      font-family: 'Harriet Display Regular', Arial;
+
+      .title h1{
+        font-size: 44px;
+        font-weight: 300;
+        letter-spacing: 0.86px;
+        line-height: 52px;
+        color: #1A1A1A;
+      }
+
+      .author{
+        font-size: 14px;
+        letter-spacing: 0.27px;
+
+        .pre{
+          font-weight: 300;
+          line-height: 20px;
+        }
+        h2{
+          font-weight: 600;
+          line-height: 17px;
+          color: #1A1A1A;
+        }
+      }
+
+      .about{
+        font-family: Arial;
+        font-size: 10px;
+        letter-spacing: .2px;
+
+        .category{
+          font-weight: 200;
+          line-height: 13px;
+          text-transform: uppercase;
+          color: #E1AB99;
+
+          margin-bottom: 0;
+        }
+        .published{
+          font-weight: 200;
+          line-height: 11px;
+
+          margin-top: 0;
+        }
+      }
+    }
+
+    .articleContent{
+      font-family: 'Harriet Display Regular';
+      font-size: 21px;
+      letter-spacing: .41px;
+      line-height: 32px;
+    }
+
+    .progress{
+      position: fixed;
+      bottom: 8px;
+      right: 15px;
+
+      font-size: 10px;
+      letter-spacing: .2px;
+      line-height: 11px;
+    }
+  }
+}

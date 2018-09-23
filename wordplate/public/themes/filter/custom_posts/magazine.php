@@ -29,6 +29,6 @@ register_extended_post_type('magazine', [
         'search_items' => __('Sök efter magasin'),
         'edit_item' => __('Redigera magasin'),
     ],
-    'rewrite'     => array( 'slug' => 'magasin' ),
+    'rewrite'     => ['slug' => 'magasin'],
     'menu_icon' => 'dashicons-book-alt',
 ]);

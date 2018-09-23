@@ -26,6 +26,6 @@ register_extended_post_type('article', [
         'search_items' => __('Sök efter artikel'),
         'edit_item' => __('Redigera artikel'),
     ],
-    'rewrite'     => array( 'slug' => 'artikel' ),
+    'rewrite'     => ['slug' => 'artikel'],
     'menu_icon' => 'dashicons-text',
 ]);

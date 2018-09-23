@@ -9,12 +9,14 @@
 
 declare(strict_types=1);
 
+setlocale(LC_ALL, 'sv_SE');
+
 // Register plugin helpers.
 require_once template_path('includes/plugins/plate.php');
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {
-    show_admin_bar(true);
+    show_admin_bar(false);
 
     // Add post thumbnails support.
     add_theme_support('post-thumbnails');
@@ -62,3 +64,5 @@ add_action('init', function () {
     require_once template_path('custom_taxonomies/index.php');
     require_once template_path('custom_admin_cols/index.php');
 });
+
+// require_once template_path('customizer.php');
