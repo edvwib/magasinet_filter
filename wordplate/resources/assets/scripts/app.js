@@ -17,8 +17,7 @@ let progressElement = document.querySelector('.articlePost .progress .value');
 if(progressElement){
   let articleLength = document.querySelector('.articlePost').clientHeight;
   window.addEventListener('scroll', () => {
-    // console.log(window.scrollY)
-    let percentProgress = Math.floor(((window.scrollY + window.innerHeight) / articleLength) * 100);
+    let percentProgress = Math.floor((window.scrollY / (articleLength - window.innerHeight)) * 100);
     progressElement.textContent = percentProgress;
   });
 }

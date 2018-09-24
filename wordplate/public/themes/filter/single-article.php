@@ -48,7 +48,7 @@ get_header(); ?>
         <div class="articleContent">
             <?= get_field('content_article'); ?>
         </div>
-        <div class="progress">Läst <span class="value">1</span>%</div>
+        <div class="progress">Läst <span class="value">0</span>%</div>
     </article>
 </main>
 
