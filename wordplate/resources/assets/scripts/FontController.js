@@ -5,12 +5,19 @@ export default class FontController{
     this.fontLabels = document.querySelectorAll('.articlePost .font label');
     this.fontInputs = document.querySelectorAll('.articlePost .font input');
 
-    // this.sizeInput = document.querySelector('.articlePost .size .input');
+    this.fontInputContainer = document.querySelector('.articlePost .size .input');
     this.fontMinus = document.querySelector('.articlePost .size .minus');
     this.fontPlus = document.querySelector('.articlePost .size .plus');
     this.fontSizeOptions = document.querySelectorAll('.articlePost .size .options .rect');
 
     this.setUpFormListeners();
+
+
+    let savedFontSize = window.localStorage.getItem('articleFontSize');
+    if (savedFontSize) {
+      this.changeFontSize(savedFontSize);
+      this.setFontSizeRange(savedFontSize);
+    }
   }
 
   setUpFormListeners(){
@@ -77,20 +84,25 @@ export default class FontController{
     }
     let newValue = e.path[1].attributes['data-size'].value;
 
-    this.fontSizeOptions.forEach(x => {
-      if (newValue >= x.attributes['data-size'].value){
-        x.classList.add('filled');
-      }
-      else{
-        x.classList.remove('filled');
-      }
-    });
-
+    this.setFontSizeRange(newValue);
     this.changeFontSize(newValue);
+    window.localStorage.setItem('articleFontSize', newValue);
   }
 
   changeFontSize(size){
     document.querySelector('.articlePost .articleContent')
       .style['font-size'] = size + 'px';
+  }
+
+  setFontSizeRange(newValue){
+    this.fontInputContainer.attributes['data-size'].value = newValue;
+    this.fontSizeOptions.forEach(x => {
+      if (newValue >= x.attributes['data-size'].value) {
+        x.classList.add('filled');
+      }
+      else {
+        x.classList.remove('filled');
+      }
+    });
   }
 }
