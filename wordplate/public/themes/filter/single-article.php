@@ -49,6 +49,53 @@ get_header(); ?>
             <?= get_field('content_article'); ?>
         </div>
         <div class="progress">Läst <span class="value">0</span>%</div>
+        <button class="settingsButton"></button>
+        <div class="settings">
+            <div class="menu">
+                <img src="/themes/filter/assets/images/settingsSymbol.svg" alt="">
+                <h1 class="active">Typsnitt</h1>
+                <h1>Sida</h1>
+                <h1>Färgläge</h1>
+                <button class="settingsClose"></button>
+            </div>
+            <div class="fontOptions">
+                <div class="fonts">
+                    <div class="font">
+                        <label for="fontHarriet">Harriet Display</label>
+                        <input type="radio" name="font"
+                        id="fontHarriet" value="harriet" checked>
+                    </div>
+                    <div class="font">
+                        <label for="fontPlayfair">Playfair Display</label>
+                        <input type="radio" name="font"
+                        id="fontPlayfair" value="playfair">
+                    </div>
+                    <div class="font">
+                        <label for="fontMerriweather">Merriweather</label>
+                        <input type="radio" name="font"
+                        id="fontMerriweather" value="merriweather">
+                    </div>
+                    <div class="font">
+                        <label for="fontOpenSans">Open Sans</label>
+                        <input type="radio" name="font"
+                        id="fontOpenSans" value="opensans">
+                    </div>
+                    <div class="font">
+                        <label for="fontMontserrat">Montserrat</label>
+                        <input type="radio" name="font"
+                        id="fontMontserrat" value="montserrat">
+                    </div>
+                    <div class="font">
+                        <label for="fontOpenDyslexic">OpenDyslexic</label>
+                        <input type="radio" name="font"
+                        id="fontOpenDyslexic" value="opendyslexic">
+                    </div>
+                </div>
+                <div class="size">
+
+                </div>
+            </div>
+        </div>
     </article>
 </main>
 
