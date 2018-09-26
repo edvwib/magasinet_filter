@@ -92,7 +92,23 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="size">
-
+                    <label for="size">Storlek:</label>
+                    <div class="input" data-size="21">
+                        <span class="minus">−</span>
+                        <div class="options">
+                            <span data-size="13" class="rect filled"></span>
+                            <span data-size="15" class="rect filled"></span>
+                            <span data-size="17" class="rect filled"></span>
+                            <span data-size="19" class="rect filled"></span>
+                            <span data-size="21" class="rect filled"></span>
+                            <span data-size="23" class="rect"></span>
+                            <span data-size="25" class="rect"></span>
+                            <span data-size="27" class="rect"></span>
+                            <span data-size="29" class="rect"></span>
+                            <span data-size="31" class="rect"></span>
+                        </div>
+                        <span class="plus">+</span>
+                    </div>
                 </div>
             </div>
         </div>
