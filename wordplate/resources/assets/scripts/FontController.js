@@ -15,7 +15,7 @@ export default class FontController{
 
     let savedFontSize = window.localStorage.getItem('articleFontSize');
     if (savedFontSize) {
-      this.changeFontSize(savedFontSize);
+      this.setFontSize(savedFontSize);
       this.setFontSizeRange(savedFontSize);
     }
   }
@@ -42,30 +42,30 @@ export default class FontController{
   handleFontFamilyForm(e){
     switch (e.target.defaultValue) {
     case 'harriet':
-      this.changeFontFamily('Harriet Display Regular');
+      this.setFontFamily('Harriet Display Regular');
       break;
     case 'playfair':
-      this.changeFontFamily('Playfair Display');
+      this.setFontFamily('Playfair Display');
       break;
     case 'merriweather':
-      this.changeFontFamily('Merriweather');
+      this.setFontFamily('Merriweather');
       break;
     case 'opensans':
-      this.changeFontFamily('Open Sans');
+      this.setFontFamily('Open Sans');
       break;
     case 'montserrat':
-      this.changeFontFamily('Montserrat');
+      this.setFontFamily('Montserrat');
       break;
     case 'opendyslexic':
-      this.changeFontFamily('OpenDyslexic');
+      this.setFontFamily('OpenDyslexic');
       break;
     default:
-      this.changeFontFamily('Harriet Display Regular');
+      this.setFontFamily('Harriet Display Regular');
       break;
     }
   }
 
-  changeFontFamily(font){
+  setFontFamily(font){
     document.querySelector('.articlePost .articleContent')
       .style['font-family'] = font;
   }
@@ -85,11 +85,11 @@ export default class FontController{
     let newValue = e.path[1].attributes['data-size'].value;
 
     this.setFontSizeRange(newValue);
-    this.changeFontSize(newValue);
+    this.setFontSize(newValue);
     window.localStorage.setItem('articleFontSize', newValue);
   }
 
-  changeFontSize(size){
+  setFontSize(size){
     document.querySelector('.articlePost .articleContent')
       .style['font-size'] = size + 'px';
   }
