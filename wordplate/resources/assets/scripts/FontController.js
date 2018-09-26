@@ -13,6 +13,14 @@ export default class FontController{
     this.setUpFormListeners();
 
 
+    // Check for saved user settings and apply if found
+    let savedFontFamily = window.localStorage.getItem('articleFontFamily');
+    if (savedFontFamily) {
+      this.handleFontFamilyForm(savedFontFamily);
+      this.fontInputs.forEach(x => {
+        x.value === savedFontFamily ? x.checked = true : x.checked = false;
+      });
+    }
     let savedFontSize = window.localStorage.getItem('articleFontSize');
     if (savedFontSize) {
       this.setFontSize(savedFontSize);
@@ -23,12 +31,12 @@ export default class FontController{
   setUpFormListeners(){
     this.fontLabels.forEach(x => {
       x.addEventListener('click', (e) => {
-        this.handleFontFamilyForm(e);
+        this.handleFontFamilyForm(e.target.defaultValue);
       });
     });
     this.fontInputs.forEach(x => {
       x.addEventListener('click', (e) => {
-        this.handleFontFamilyForm(e);
+        this.handleFontFamilyForm(e.target.defaultValue);
       });
     });
     this.fontMinus.addEventListener('click', (e) => {
@@ -39,8 +47,8 @@ export default class FontController{
     });
   }
 
-  handleFontFamilyForm(e){
-    switch (e.target.defaultValue) {
+  handleFontFamilyForm(fontInput){
+    switch (fontInput) {
     case 'harriet':
       this.setFontFamily('Harriet Display Regular');
       break;
@@ -63,6 +71,8 @@ export default class FontController{
       this.setFontFamily('Harriet Display Regular');
       break;
     }
+
+    window.localStorage.setItem('articleFontFamily', fontInput);
   }
 
   setFontFamily(font){
