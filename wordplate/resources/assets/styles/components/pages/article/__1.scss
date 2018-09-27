@@ -1,2 +1,8 @@
 @import 'article';
-@import 'articleSettings';
+
+
+// Settings
+@import 'settings/articleSettings';
+@import 'settings/font';
+@import 'settings/layout';
+@import 'settings/color';

@@ -1,0 +1,57 @@
+.textLayout.view{
+  padding: 8px 16px 16px 16px;
+
+  >div h2{
+    font-size: 14px;
+    letter-spacing: 0.27px;
+    line-height: 16px;
+    margin: 0;
+  }
+  .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button{
+    height: 64px;
+    width: 40px;
+    margin: 0 12px;
+    margin-top: 8px;
+    background: none;
+    border: none;
+
+    filter: invert(100%);
+  }
+
+  .lineHeight{
+    border-bottom: 1px solid #000;
+    padding-bottom: 14px;
+
+    .tight{
+      background-image: url('../../assets/img/articleSettings/lineHeightTight.svg');
+    }
+    .regular{
+      background-image: url('../../assets/img/articleSettings/lineHeightRegular.svg');
+    }
+    .loose{
+      background-image: url('../../assets/img/articleSettings/lineHeightLoose.svg');
+    }
+  }
+
+  .margin{
+    padding-bottom: 14px;
+
+    h2{
+      margin-top: 8px;
+    }
+    .tight{
+      background-image: url('../../assets/img/articleSettings/marginTight.svg');
+    }
+    .regular{
+      background-image: url('../../assets/img/articleSettings/marginRegular.svg');
+    }
+    .loose{
+      background-image: url('../../assets/img/articleSettings/marginLoose.svg');
+    }
+  }
+}
