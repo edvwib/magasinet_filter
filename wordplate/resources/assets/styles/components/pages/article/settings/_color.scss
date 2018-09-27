@@ -1,0 +1,38 @@
+.settings.active .colorMode.view.active{
+  display: flex;
+}
+
+.colorMode{
+  justify-content: center;
+  align-items: center;
+
+  .color{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+
+    label{
+      margin-bottom: 13px;
+    }
+    .image{
+      height: 104px;
+      width: 64px;
+      background-size: contain;
+      margin-bottom: 16px;
+    }
+    &.white .image, &.black .image{
+      // TODO: Change image with new design with black borders
+      background-image: url('../../assets/img/articleSettings/colorWhite.svg');
+    }
+    &.sepia .image{
+      background-image: url('../../assets/img/articleSettings/colorSepia.svg');
+    }
+    &.black .image{
+      filter: invert(100%);
+    }
+    input{
+      margin-bottom: 32px;
+    }
+  }
+}

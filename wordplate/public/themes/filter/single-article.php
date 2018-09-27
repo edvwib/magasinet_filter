@@ -130,7 +130,21 @@ get_header(); ?>
                 </div>
             </div>
             <div class="colorMode view">
-
+                <div class="color white">
+                    <label for="white">Vit</label>
+                    <label for="white" class="image"></label>
+                    <input type="radio" name="color" id="white" checked>
+                </div>
+                <div class="color sepia">
+                    <label for="sepia">Sepia</label>
+                    <label for="sepia" class="image"></label>
+                    <input type="radio" name="color" id="sepia">
+                </div>
+                <div class="color black">
+                    <label for="black">Svart</label>
+                    <label for="black" class="image"></label>
+                    <input type="radio" name="color" id="black">
+                </div>
             </div>
         </div>
     </article>

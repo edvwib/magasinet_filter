@@ -1,7 +1,7 @@
 import SettingsViewController from './SettingsViewController.js';
 import FontController from './FontController.js';
 import LayoutController from './LayoutController.js';
-// import ColorController from './ColorController.js';
+import ColorController from './ColorController.js';
 
 export default class SettingsController{
   constructor(){
@@ -19,7 +19,7 @@ export default class SettingsController{
 
     new FontController();
     new LayoutController();
-    // new ColorController();
+    new ColorController();
   }
 
   setUpListener(e){

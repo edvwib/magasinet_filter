@@ -10,13 +10,17 @@
 
     .metadata{
       font-family: 'Harriet Display Regular', Arial;
+      color: #1A1A1A;
+
+      &.black{
+        color: #999;
+      }
 
       .title h1{
         font-size: 44px;
         font-weight: 300;
         letter-spacing: 0.86px;
         line-height: 52px;
-        color: #1A1A1A;
       }
 
       .author{
@@ -30,7 +34,6 @@
         h2{
           font-weight: 600;
           line-height: 17px;
-          color: #1A1A1A;
         }
       }
 

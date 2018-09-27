@@ -78,5 +78,28 @@
         display: block;
       }
     }
+
+    // Radio input style
+      input[type="radio"]{
+        height: 20px;
+        width: 20px;
+        border: 1.5px solid #000;
+        border-radius: 10px;
+        -webkit-appearance: none;
+      }
+      input[type="radio"]:after {
+        background-color: none;
+        border-radius: 25px;
+        content: '';
+        display: block;
+        position: relative;
+        height: 10px;
+        width: 10px;
+        left: 3px;
+        top: 4px;
+      }
+      input[type="radio"]:checked:after {
+        background-color: #000;
+      }
   }
 }
