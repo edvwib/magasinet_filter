@@ -13,7 +13,7 @@
     border: none;
     border-radius: 50%;
 
-    background-image: url('../../assets/img/settingsIcon.svg');
+    background-image: url('../../assets/img/articleSettings/settingsIcon.svg');
     background-size: contain;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
   }
@@ -58,20 +58,27 @@
         letter-spacing: .27px;
         line-height: 16px;
       }
-      .settingsClose{
+      .close{
         height: 18px;
         width: 18px;
         background: none;
         border: none;
-        background-image: url('../../assets/img/x.svg');
+        background-image: url('../../assets/img/articleSettings/settingsClose.svg');
         background-size: contain;
       }
     }
 
-    .fontOptions{
+    >.view{
       padding: 0 13px;
       padding-top: 16px;
+      display: none;
 
+      &.active{
+        display: block;
+      }
+    }
+
+    >.fontOptions{
       .fonts{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -162,6 +169,62 @@
               margin: 0 1px;
             }
           }
+        }
+      }
+    }
+
+    >.textLayout{
+      padding: 8px 16px 16px 16px;
+      >div h2{
+        font-size: 14px;
+        letter-spacing: 0.27px;
+        line-height: 16px;
+        margin: 0;
+      }
+      .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button{
+        height: 64px;
+        width: 40px;
+        margin: 0 12px;
+        margin-top: 8px;
+        background: none;
+        border: none;
+
+        filter: invert(100%);
+      }
+
+      .lineHeight{
+        border-bottom: 1px solid #000;
+        padding-bottom: 14px;
+
+        .tight{
+          background-image: url('../../assets/img/articleSettings/lineHeightTight.svg');
+        }
+        .regular{
+          background-image: url('../../assets/img/articleSettings/lineHeightRegular.svg');
+        }
+        .loose{
+          background-image: url('../../assets/img/articleSettings/lineHeightLoose.svg');
+        }
+      }
+
+      .margin{
+        h2{
+          margin-top: 8px;
+        }
+
+        .tight{
+          background-image: url('../../assets/img/articleSettings/marginTight.svg');
+        }
+        .regular{
+          background-image: url('../../assets/img/articleSettings/marginRegular.svg');
+        }
+        .loose{
+          background-image: url('../../assets/img/articleSettings/marginLoose.svg');
         }
       }
     }

@@ -61,6 +61,12 @@
       font-size: 21px;
       letter-spacing: .41px;
       line-height: 32px;
+      margin: 0 auto;
+
+      img{
+        max-width: 100%;
+        object-fit: contain;
+      }
     }
 
     .progress{

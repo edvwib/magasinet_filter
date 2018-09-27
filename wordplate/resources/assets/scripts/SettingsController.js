@@ -1,6 +1,6 @@
 import SettingsViewController from './SettingsViewController.js';
 import FontController from './FontController.js';
-// import LayoutController from './LayoutController.js';
+import LayoutController from './LayoutController.js';
 // import ColorController from './ColorController.js';
 
 export default class SettingsController{
@@ -12,13 +12,13 @@ export default class SettingsController{
     this.settingsButton = document.querySelector('.articlePost .settingsButton');
     if (this.settingsButton) {
       this.settings = document.querySelector('.articlePost .settings');
-      this.settingsClose = this.settings.querySelector('.settingsClose');
+      this.settingsClose = this.settings.querySelector('.close');
       this.setUpListener(this.settingsButton);
       this.setUpListener(this.settingsClose);
     }
 
     new FontController();
-    // new LayoutController();
+    new LayoutController();
     // new ColorController();
   }
 

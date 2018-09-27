@@ -53,12 +53,12 @@ get_header(); ?>
         <div class="settings">
             <div class="menu">
                 <img src="/themes/filter/assets/images/settingsSymbol.svg" alt="">
-                <h1 class="active">Typsnitt</h1>
-                <h1>Sida</h1>
-                <h1>Färgläge</h1>
-                <button class="settingsClose"></button>
+                <h1 class="fontOptions button active">Typsnitt</h1>
+                <h1 class="textLayout button">Sida</h1>
+                <h1 class="colorMode button">Färgläge</h1>
+                <button class="close"></button>
             </div>
-            <div class="fontOptions">
+            <div class="fontOptions view active">
                 <div class="fonts">
                     <div class="font">
                         <label for="fontHarriet">Harriet Display</label>
@@ -110,6 +110,27 @@ get_header(); ?>
                         <span class="plus">+</span>
                     </div>
                 </div>
+            </div>
+            <div class="textLayout view">
+                <div class="lineHeight">
+                    <h2>Radavstånd</h2>
+                    <div class="buttons">
+                        <button class="tight" data-value="22"></button>
+                        <button class="regular active" data-value="32"></button>
+                        <button class="loose" data-value="42"></button>
+                    </div>
+                </div>
+                <div class="margin">
+                    <h2>Marginal</h2>
+                    <div class="buttons">
+                        <button class="tight" data-value="50"></button>
+                        <button class="regular active" data-value="75"></button>
+                        <button class="loose" data-value="100"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="colorMode view">
+
             </div>
         </div>
     </article>
