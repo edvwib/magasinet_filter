@@ -52,7 +52,7 @@ get_header(); ?>
         <button class="settingsButton"></button>
         <div class="settings">
             <div class="menu">
-                <img src="/themes/filter/assets/images/settingsSymbol.svg" alt="">
+                <div class="settingsIcon"></div>
                 <h1 class="fontOptions button active">Typsnitt</h1>
                 <h1 class="textLayout button">Sida</h1>
                 <h1 class="colorMode button">Färgläge</h1>

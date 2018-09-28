@@ -13,7 +13,7 @@
     border: none;
     border-radius: 50%;
 
-    background-image: url('../../assets/img/articleSettings/settingsIcon.svg');
+    background-image: url('../../assets/img/articleSettings/settingsButton.svg');
     background-size: contain;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
   }
@@ -42,8 +42,11 @@
       padding: 10px 16px 0 16px;
       border-radius: 20px 20px 0 0;
 
-      >img{
-        align-self: flex-start;
+      .settingsIcon{
+        height: 26px;
+        width: 26px;
+        background-image: url('../../assets/img/articleSettings/settingsIcon.svg');
+        background-size: contain;
       }
 
       h1{
