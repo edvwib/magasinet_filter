@@ -15,15 +15,18 @@ module.exports = {
         ],
         "linebreak-style": [
             "error",
-            "unix"
+            "unix",
         ],
         "quotes": [
             "error",
-            "single"
+            "single",
         ],
         "semi": [
             "error",
-            "always"
+            "always",
+        ],
+        "no-console": [
+            1 //Warn on console statement
         ]
     }
 };
