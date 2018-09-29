@@ -36,4 +36,4 @@ if(progressElement){
   }, 2000);
 }
 
-new SettingsController();
+document.querySelector('.articleContent') ? new SettingsController() : '';
