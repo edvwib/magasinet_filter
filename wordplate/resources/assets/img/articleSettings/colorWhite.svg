@@ -5,10 +5,10 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Läsinställningar-färg-mobil" transform="translate(-56.000000, -376.000000)" fill-rule="nonzero">
+        <g id="Läsinställningar-färg-mobil" transform="translate(-56.000000, -376.000000)" fill-rule="nonzero" stroke="#1A1A1A">
             <g id="Group-10-Copy" transform="translate(56.000000, 376.000000)">
-                <rect id="Rectangle-3-Copy-5" stroke="#FFFFFF" stroke-width="2" fill="#FFFFFF" x="1" y="1" width="62" height="102" rx="5"></rect>
-                <g id="Group-4-Copy-3" transform="translate(13.000000, 13.000000)" stroke="#1A1A1A" stroke-linecap="round">
+                <rect id="Rectangle-3-Copy-5" stroke-width="2" fill="#FFFFFF" x="1" y="1" width="62" height="102" rx="5"></rect>
+                <g id="Group-4-Copy-3" transform="translate(13.000000, 13.000000)" stroke-linecap="round">
                     <path d="M0.8125,0.56669205 L38.1875,0.56669205" id="Line-3-Copy-16"></path>
                     <path d="M0.8125,8.30546756 L38.1875,8.30546756" id="Line-3-Copy-17"></path>
                     <path d="M0.8125,16.0442431 L38.1875,16.0442431" id="Line-3-Copy-18"></path>

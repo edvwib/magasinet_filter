@@ -13,14 +13,23 @@
     align-items: center;
   }
   button{
-    height: 64px;
-    width: 40px;
+    height: 70px;
+    width: 46px;
     margin: 0 12px;
     margin-top: 8px;
     background: none;
     border: none;
+    border-radius: 9px;
+    background-repeat: no-repeat;
+    background-position: center;
 
-    filter: invert(100%);
+    &.selected{
+      border: 2px solid #E1AB99;
+
+      &:focus{
+        outline: none;
+      }
+    }
   }
 
   .lineHeight{

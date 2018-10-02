@@ -49,10 +49,22 @@ export default class LayoutController {
     // TODO: Check if font size is overlapping with line-height
     document.querySelector('.articlePost .articleContent')
       .style['line-height'] = height + 'px';
+    this.setBorder(height, '.lineHeight');
   }
 
   setMargin(width) {
     document.querySelector('.articlePost .articleContent')
       .style['max-width'] = width + '%';
+    this.setBorder(width, '.margin');
+  }
+
+  setBorder(value, container) {
+    document.querySelectorAll(`.textLayout ${container} button`).forEach(b => {
+      if (b.attributes['data-value'].value === value) {
+        b.classList.add('selected');
+      } else {
+        b.classList.remove('selected');
+      }
+    });
   }
 }

@@ -116,7 +116,7 @@ get_header(); ?>
                     <h2>Radavstånd</h2>
                     <div class="buttons">
                         <button class="tight" data-value="22"></button>
-                        <button class="regular active" data-value="32"></button>
+                        <button class="regular" data-value="32"></button>
                         <button class="loose" data-value="42"></button>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ get_header(); ?>
                     <h2>Marginal</h2>
                     <div class="buttons">
                         <button class="tight" data-value="50"></button>
-                        <button class="regular active" data-value="75"></button>
+                        <button class="regular" data-value="75"></button>
                         <button class="loose" data-value="100"></button>
                     </div>
                 </div>

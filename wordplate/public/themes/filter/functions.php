@@ -64,5 +64,3 @@ add_action('init', function () {
     require_once template_path('custom_taxonomies/index.php');
     require_once template_path('custom_admin_cols/index.php');
 });
-
-// require_once template_path('customizer.php');
