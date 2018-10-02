@@ -37,10 +37,16 @@
     .menu{
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
       background-color: #E1AB99;
       padding: 10px 16px 0 16px;
       border-radius: 20px 20px 0 0;
+      height: 40px;
+
+      >*{
+        margin: 0px;
+        margin-bottom: 5px;
+      }
 
       .settingsIcon{
         height: 26px;
@@ -69,6 +75,8 @@
         border: none;
         background-image: url('../../assets/img/articleSettings/settingsClose.svg');
         background-size: contain;
+        margin-bottom: 10px;
+        margin-right: 4px;
       }
     }
 
