@@ -17,5 +17,8 @@
             <div class="logoContainer">
                 <img src="/themes/filter/assets/logo.svg" alt="filter logga">
             </div>
+            <div class="menuIcon">
+                <div class="icon"></div>
+            </div>
         </nav>
     </header>

@@ -3,6 +3,9 @@ nav{
   width: 100%;
   background-color: #1A1A1A;
 
+  display: flex;
+  justify-content: space-between;
+
   .logoContainer{
     height: 100%;
     padding: 8px;
@@ -10,6 +13,19 @@ nav{
     img{
       height: 100%;
       filter: invert(100%);
+    }
+  }
+
+  .menuIcon{
+    width: 32px;
+    margin: 20px 23px;
+
+    .icon{
+      height: 100%;
+      width: 100%;
+      background-image: url('../../img/menuIcon.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 }
