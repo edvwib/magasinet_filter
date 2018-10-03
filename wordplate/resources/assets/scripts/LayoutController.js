@@ -1,13 +1,9 @@
 export default class LayoutController {
   constructor() {
-    console.log('LayoutController loaded');
-
     this.lineHeightButtons = document.querySelectorAll('.settings .lineHeight button');
     this.marginButtons = document.querySelectorAll('.settings .margin button');
 
-
     this.setUpEventListeners();
-
 
     // Check for saved user settings and apply if found
     let savedLineHeight = window.localStorage.getItem('articleLineHeight');

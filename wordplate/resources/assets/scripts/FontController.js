@@ -1,17 +1,13 @@
 export default class FontController{
   constructor(){
-    console.log('FontController loaded');
-
     this.fontLabels = document.querySelectorAll('.articlePost .font label');
     this.fontInputs = document.querySelectorAll('.articlePost .font input');
-
     this.fontInputContainer = document.querySelector('.articlePost .size .input');
     this.fontMinus = document.querySelector('.articlePost .size .minus');
     this.fontPlus = document.querySelector('.articlePost .size .plus');
     this.fontSizeOptions = document.querySelectorAll('.articlePost .size .options .rect');
 
     this.setUpFormListeners();
-
 
     // Check for saved user settings and apply if found
     let savedFontFamily = window.localStorage.getItem('articleFontFamily');

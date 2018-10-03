@@ -1,12 +1,11 @@
 import SettingsViewController from './SettingsViewController.js';
+import SettingsButtonController from './SettingsButtonController.js'
 import FontController from './FontController.js';
 import LayoutController from './LayoutController.js';
 import ColorController from './ColorController.js';
 
 export default class SettingsController{
   constructor(){
-    console.log('SettingsController loaded');
-
     new SettingsViewController();
 
     this.settingsButton = document.querySelector('.articlePost .settingsButton');
@@ -17,6 +16,7 @@ export default class SettingsController{
       this.setUpListener(this.settingsClose);
     }
 
+    new SettingsButtonController();
     new FontController();
     new LayoutController();
     new ColorController();
