@@ -1,10 +1,16 @@
-<?php get_header(); ?>
+<?php
+    get_header();
 
-<main role="main">
+    $postTypes = ['post_type'=>['magazine', 'article']];
+    query_posts($postTypes);
+
+?>
+
+<main role="main" class="home">
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
         <article>
             <header>
-                <h1><?php the_title(); ?></h1>
+                <a href=<?php the_permalink(); ?>><?php the_title(); ?></a>
             </header>
 
             <?php the_content(); ?>

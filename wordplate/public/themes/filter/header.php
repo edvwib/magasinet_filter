@@ -17,6 +17,5 @@
             <div class="logoContainer">
                 <img src="/themes/filter/assets/logo.svg" alt="filter logga">
             </div>
-            <?php //wp_nav_menu(['theme_location' => 'primary-menu']); ?>
         </nav>
     </header>
