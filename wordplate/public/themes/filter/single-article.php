@@ -68,18 +68,58 @@ get_header(); ?>
                 <div class="media">
                     <a href="https://facebook.com" class="facebook"></a>
                     <a href="https://twitter.com" class="twitter"></a>
-                    <a href="https://instagram.com" class="instagram"></a>
                 </div>
                 <h1 class="title">Gillade du läsningen?</h1>
                 <p>Rösta upp artikeln med ett tryck på hjärtat!</p>
                 <button class="heart"></button>
                 <h2 class="title">Väckte artikeln känslor?</h2>
-                <p><a href="mailto:redaktion@magasinetfilter.se">Mejla redaktionen</a> och berätta vad du känner!</p>
+                <p class="mailUs"><a href="mailto:redaktion@magasinetfilter.se">Mejla redaktionen</a> och berätta vad du känner!</p>
             </div>
             <div class="continue">
                 <h1 class="title">Läs vidare direkt</h1>
                 <p>Här nedan har vi samlat ett gäng artiklar i samma kaliber.</p>
                 <span class="arrow"></span>
+                <div class="related">
+                    <div class="newMagazine">
+                        <h1>FRÅN NYA NUMMRET</h1>
+                        <div class="articles">
+                            <div class="article">
+                                <div class="img"></div>
+                                <h2>{{title here}}</h2>
+                            </div>
+                            <div class="article">
+                                <div class="img"></div>
+                                <h2>{{title here}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relevantTheme">
+                        <h1>{{theme here}}</h1>
+                        <div class="articles">
+                            <div class="article">
+                                <div class="img"></div>
+                                <h2>{{title here}}</h2>
+                            </div>
+                            <div class="article">
+                                <div class="img"></div>
+                                <h2>{{title here}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relevantCategory">
+                        <h1>{{category here}}</h1>
+                        <div class="articles">
+                            <div class="article">
+                                <div class="img"></div>
+                                <h2>{{title here}}</h2>
+                            </div>
+                            <div class="article">
+                                <div class="img"></div>
+                                <h2>{{title here}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -6,7 +6,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(auto, 1fr);
     justify-items: center;
 
     a{
@@ -18,9 +17,6 @@
       background-image: url(../../../../../img/social/fb-square.svg);
     }
     .twitter{
-      background-image: url(../../../../../img/social/twitter-square.svg);
-    }
-    .instagram{
       background-image: url(../../../../../img/social/twitter-square.svg);
     }
   }
@@ -41,5 +37,13 @@
   }
   h2.title{
     margin-top: 33px;
+  }
+  .mailUs{
+    a{
+      text-decoration: none;
+      color: #1A1A1A;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #E1AB99;
+    }
   }
 }
