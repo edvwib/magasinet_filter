@@ -10,8 +10,6 @@ export default class SettingsController{
     if (this.settingsButton) {
       this.settings = document.querySelector('.articlePost .settings');
       this.settingsClose = this.settings.querySelector('.close');
-      this.setUpListener(this.settingsButton);
-      this.setUpListener(this.settingsClose);
 
       this.move = this.move.bind(this);
       this.end = this.end.bind(this);
@@ -20,8 +18,12 @@ export default class SettingsController{
       this.dragging = false;
       this.X = window.innerWidth - 15;
       this.Y = 287;
+      this.settingsButtonWidth = this.settingsButton.clientWidth;
       this.windowHeight = window.innerHeight;
       this.windowWidth = window.innerWidth;
+
+      this.setUpListener(this.settingsButton);
+      this.setUpListener(this.settingsClose);
       this.setUpMoveListeners();
 
       new SettingsViewController();
@@ -40,6 +42,7 @@ export default class SettingsController{
     if (!e.target.classList.contains('settingsButton'))
       return;
 
+    this.settingsButton.style.transitionDuration = '0s';
     this.dragging = true;
     requestAnimationFrame(this.update);
 
@@ -51,6 +54,7 @@ export default class SettingsController{
 
   end() {
     this.dragging = false;
+    this.settingsButton.style.transitionDuration = '0.05s';
     this.settingsButton.style.right = 'unset';
     if (this.X > this.windowWidth / 2) {
       this.X = this.windowWidth - this.settingsButton.clientWidth - 15;
@@ -69,13 +73,23 @@ export default class SettingsController{
 
     this.settingsButton.style.left = `${Math.abs(this.X - this.settingsButton.clientWidth / 2)}px`;
     this.settingsButton.style.top = `${this.Y - this.settingsButton.clientHeight / 2}px`;
+  }
 
-    document.querySelector('.settings').style.top = `${this.Y - this.settingsButton.clientHeight / 2}px`;
-
+  moveSettingsWindow(){
+    let position = this.Y - (this.settingsButtonWidth / 2);
+    if (position > (this.windowHeight - this.settings.clientHeight - 15)){
+      let overlap = position - this.settings.clientHeight;
+      this.settings.style.top = `${position - overlap}px`;
+      // this.settings.style.top = `${this.Y + (this.settingsButtonWidth / 2) - this.settings.clientHeight + overlap}px`;
+    }
+    else
+      this.settings.style.top = `${position}px`;
   }
 
   setUpListener(e){
-    e.addEventListener('click', () => {
+    e.addEventListener('click', (e) => {
+      this.X = e.clientX || e.touches[0].clientX;
+      this.Y = e.clientY || e.touches[0].clientY;
       this.toggleSettingsView();
     });
   }
@@ -84,8 +98,12 @@ export default class SettingsController{
     this.settingsButton.classList.contains('active')
       ? this.settingsButton.classList.remove('active')
       : this.settingsButton.classList.add('active');
-    this.settings.classList.contains('active')
-      ? this.settings.classList.remove('active')
-      : this.settings.classList.add('active');
+
+    if (this.settings.classList.contains('active')){
+      this.settings.classList.remove('active');
+    } else {
+      this.settings.classList.add('active');
+      this.moveSettingsWindow();
+    }
   }
 }

@@ -5,7 +5,7 @@
     }
 
     will-change: top, right, bottom, left;
-    transition: all .05s;
+    transition: all 0s;
 
     position: fixed;
     right: 15px;
@@ -26,6 +26,7 @@
       display: block;
     }
 
+    will-change: top;
     display: none;
     position: fixed;
     top: 287px;
