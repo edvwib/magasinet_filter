@@ -1,7 +1,5 @@
 export default class SettingsViewController{
   constructor(){
-    console.log('SettingsViewController loaded');
-
     this.fontButton = document.querySelector('.settings .menu .font');
     this.textButton = document.querySelector('.settings .menu .text');
     this.colorButton = document.querySelector('.settings .menu .color');
@@ -9,6 +7,11 @@ export default class SettingsViewController{
     this.views = document.querySelectorAll('.settings .view');
 
     this.setUpButtonListeners();
+
+    // Check for saved user settings and apply if found
+    let oldView = window.localStorage.getItem('articleSettingsView');
+    if(oldView)
+      this.handleButtonClick(oldView);
   }
 
   setUpButtonListeners(){
@@ -19,11 +22,13 @@ export default class SettingsViewController{
     });
   }
 
-  handleButtonClick(button){
+  handleButtonClick(view){
+    window.localStorage.setItem('articleSettingsView', view);
+
     this.buttons.forEach(x => {
-      button === x.classList[0] ? x.classList.add('active') : x.classList.remove('active');
+      view === x.classList[0] ? x.classList.add('active') : x.classList.remove('active');
     });
-    this.setView(button);
+    this.setView(view);
   }
 
   setView(view){
