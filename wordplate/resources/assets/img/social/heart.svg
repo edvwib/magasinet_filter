@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="118px" height="104px" viewBox="0 0 118 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_heart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.704464286">
+        <g id="Artikel-mobil-slutet" transform="translate(-125.000000, -776.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M191.960321,876.957501 C187.478045,881.023936 180.577698,881.023936 176.095422,876.898568 L175.446671,876.309229 C144.483577,848.315661 124.254356,829.987241 125.021061,807.120916 C125.374925,797.102165 130.505952,787.495952 138.821754,781.838304 C154.391767,771.230215 173.618374,776.180657 183.998383,788.321025 C194.378391,776.180657 213.604998,771.171281 229.175011,781.838304 C237.490814,787.495952 242.621841,797.102165 242.975704,807.120916 C243.801387,829.987241 223.513188,848.315661 192.550094,876.427097 L191.960321,876.957501 Z" id="icon_heart"></path>
+        </g>
+    </g>
+</svg>

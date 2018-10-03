@@ -4,6 +4,9 @@
       display: none;
     }
 
+    will-change: top, right, bottom, left;
+    transition: all .05s;
+
     position: fixed;
     right: 15px;
     top: 287px;

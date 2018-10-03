@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_info</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artikel-mobil-slutet" transform="translate(-330.000000, -546.000000)">
+            <g id="icon_info" transform="translate(328.000000, 544.000000)">
+                <circle id="Oval-3" fill="#FFFFFF" fill-rule="nonzero" cx="12" cy="12" r="10"></circle>
+                <g id="round-info-24px">
+                    <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                    <path d="M12,2 C6.48,2 2,6.48 2,12 C2,17.52 6.48,22 12,22 C17.52,22 22,17.52 22,12 C22,6.48 17.52,2 12,2 Z M12,17 C11.45,17 11,16.55 11,16 L11,12 C11,11.45 11.45,11 12,11 C12.55,11 13,11.45 13,12 L13,16 C13,16.55 12.55,17 12,17 Z M13,9 L11,9 L11,7 L13,7 L13,9 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -6,9 +6,8 @@
   }
 
   article{
-    padding: 16px;
-
     .metadata{
+      padding: 0 16px;
       font-family: 'Harriet Display Regular', Arial;
       color: #1A1A1A;
 
@@ -60,6 +59,7 @@
     }
 
     .articleContent{
+      padding: 0 16px;
       font-family: 'Harriet Display Regular';
       font-size: 21px;
       letter-spacing: .41px;

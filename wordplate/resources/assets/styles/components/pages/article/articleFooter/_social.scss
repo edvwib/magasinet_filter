@@ -1,0 +1,45 @@
+.articleFooter .social{
+  margin-top: 32px;
+
+  .media{
+    min-height: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto, 1fr);
+    justify-items: center;
+
+    a{
+      background-repeat: no-repeat;
+      height: 40px;
+      width: 40px;
+    }
+    .facebook{
+      background-image: url(../../../../../img/social/fb-square.svg);
+    }
+    .twitter{
+      background-image: url(../../../../../img/social/twitter-square.svg);
+    }
+    .instagram{
+      background-image: url(../../../../../img/social/twitter-square.svg);
+    }
+  }
+  .title{
+    margin: 29px 0 0 0;
+  }
+  p{
+    margin: 4px 0 0 0;
+  }
+  .heart{
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-image: url('../../../../../img/social/heart.svg');
+    height: 104px;
+    width: 118px;
+    margin-top: 18px;
+  }
+  h2.title{
+    margin-top: 33px;
+  }
+}
