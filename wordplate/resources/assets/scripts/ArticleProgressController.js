@@ -15,6 +15,7 @@ export default class ArticleProgressController{
     window.addEventListener('resize', () => {
       // Update articleLength since the width of the article has changed.
       this.articleLength = this.article.clientHeight;
+      this.setPercent();
     });
 
     window.addEventListener('load', () => {
