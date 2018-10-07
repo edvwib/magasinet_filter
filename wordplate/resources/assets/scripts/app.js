@@ -12,28 +12,4 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-
-// Article progress %
-let article;
-let progressElement = document.querySelector('.articlePost .progress .value');
-if(progressElement){
-  article = document.querySelector('.articlePost');
-
-  setTimeout(() => { // Let the page finish rendering before calculating
-    let articleLength = article.clientHeight;
-    let articleYTop = Math.floor(article.getBoundingClientRect().top + document.documentElement.scrollTop);
-    let articleYBottom = Math.floor(article.getBoundingClientRect().bottom + document.documentElement.scrollTop);
-
-    window.addEventListener('scroll', () => {
-      let percentProgress = Math.floor((window.scrollY / (articleLength)) * 100);
-      progressElement.textContent = percentProgress >= 98 ? '100' : percentProgress;
-    });
-    window.addEventListener('resize', () => {
-      articleLength = article.clientHeight;
-      articleYTop = Math.floor(article.getBoundingClientRect().top + document.documentElement.scrollTop);
-      articleYBottom = Math.floor(article.getBoundingClientRect().bottom + document.documentElement.scrollTop);
-    });
-  }, 2000);
-}
-
 document.querySelector('.articleContent') ? new SettingsController() : '';

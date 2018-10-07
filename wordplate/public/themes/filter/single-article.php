@@ -48,80 +48,6 @@ get_header(); ?>
         <div class="articleContent">
             <?= get_field('content_article'); ?>
         </div>
-        <div class="articleFooter">
-            <span class="line"></span>
-            <span class="arrow"></span>
-            <div class="intro">
-                <h1 class="title">Sprid ordet!</h1>
-                <p>Hjälp fler att upptäcka denna artikel.</p>
-            </div>
-            <form action="#" class="share">
-                <p class="intro">Vet du någon som skulle tycka om den här artikeln? Skriv din väns mail och dela med dig utav hela artikeln!</p>
-                <input type="email" name="email" id="email" placeholder="Email:">
-                <input type="submit" value="Dela!">
-                <div class="info">
-                    <p class="shareCount">Du har 3 artikeldelningar kvar!</p>
-                    <button class="infobutton"></button>
-                </div>
-            </form>
-            <div class="social">
-                <div class="media">
-                    <a href="https://facebook.com" class="facebook"></a>
-                    <a href="https://twitter.com" class="twitter"></a>
-                </div>
-                <h1 class="title">Gillade du läsningen?</h1>
-                <p>Rösta upp artikeln med ett tryck på hjärtat!</p>
-                <button class="heart"></button>
-                <h2 class="title">Väckte artikeln känslor?</h2>
-                <p class="mailUs"><a href="mailto:redaktion@magasinetfilter.se">Mejla redaktionen</a> och berätta vad du känner!</p>
-            </div>
-            <div class="continue">
-                <h1 class="title">Läs vidare direkt</h1>
-                <p>Här nedan har vi samlat ett gäng artiklar i samma kaliber.</p>
-                <span class="arrow"></span>
-                <div class="related">
-                    <div class="newMagazine">
-                        <h1>FRÅN NYA NUMMRET</h1>
-                        <div class="articles">
-                            <div class="article">
-                                <div class="img"></div>
-                                <h2>{{title here}}</h2>
-                            </div>
-                            <div class="article">
-                                <div class="img"></div>
-                                <h2>{{title here}}</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relevantTheme">
-                        <h1>{{theme here}}</h1>
-                        <div class="articles">
-                            <div class="article">
-                                <div class="img"></div>
-                                <h2>{{title here}}</h2>
-                            </div>
-                            <div class="article">
-                                <div class="img"></div>
-                                <h2>{{title here}}</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relevantCategory">
-                        <h1>{{category here}}</h1>
-                        <div class="articles">
-                            <div class="article">
-                                <div class="img"></div>
-                                <h2>{{title here}}</h2>
-                            </div>
-                            <div class="article">
-                                <div class="img"></div>
-                                <h2>{{title here}}</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="progress">Läst <span class="value">0</span>%</div>
         <button class="settingsButton"></button>
@@ -223,6 +149,81 @@ get_header(); ?>
             </div>
         </div>
     </article>
+
+    <div class="articleFooter">
+        <span class="line"></span>
+        <span class="arrow"></span>
+        <div class="intro">
+            <h1 class="title">Sprid ordet!</h1>
+            <p>Hjälp fler att upptäcka denna artikel.</p>
+        </div>
+        <form action="#" class="share">
+            <p class="intro">Vet du någon som skulle tycka om den här artikeln? Skriv din väns mail och dela med dig utav hela artikeln!</p>
+            <input type="email" name="email" id="email" placeholder="Email:">
+            <input type="submit" value="Dela!">
+            <div class="info">
+                <p class="shareCount">Du har 3 artikeldelningar kvar!</p>
+                <button class="infobutton"></button>
+            </div>
+        </form>
+        <div class="social">
+            <div class="media">
+                <a href="https://facebook.com" class="facebook"></a>
+                <a href="https://twitter.com" class="twitter"></a>
+            </div>
+            <h1 class="title">Gillade du läsningen?</h1>
+            <p>Rösta upp artikeln med ett tryck på hjärtat!</p>
+            <button class="heart"></button>
+            <h2 class="title">Väckte artikeln känslor?</h2>
+            <p class="mailUs"><a href="mailto:redaktion@magasinetfilter.se">Mejla redaktionen</a> och berätta vad du känner!</p>
+        </div>
+        <div class="continue">
+            <h1 class="title">Läs vidare direkt</h1>
+            <p>Här nedan har vi samlat ett gäng artiklar i samma kaliber.</p>
+            <span class="arrow"></span>
+            <div class="related">
+                <div class="newMagazine">
+                    <h1>FRÅN NYA NUMMRET</h1>
+                    <div class="articles">
+                        <div class="article">
+                            <div class="img"></div>
+                            <h2>{{title here}}</h2>
+                        </div>
+                        <div class="article">
+                            <div class="img"></div>
+                            <h2>{{title here}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="relevantTheme">
+                    <h1>{{theme here}}</h1>
+                    <div class="articles">
+                        <div class="article">
+                            <div class="img"></div>
+                            <h2>{{title here}}</h2>
+                        </div>
+                        <div class="article">
+                            <div class="img"></div>
+                            <h2>{{title here}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="relevantCategory">
+                    <h1>{{category here}}</h1>
+                    <div class="articles">
+                        <div class="article">
+                            <div class="img"></div>
+                            <h2>{{title here}}</h2>
+                        </div>
+                        <div class="article">
+                            <div class="img"></div>
+                            <h2>{{title here}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <?php get_footer();

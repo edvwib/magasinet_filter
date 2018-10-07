@@ -1,3 +1,4 @@
+import ArticleProgressController from './ArticleProgressController.js';
 import SettingsViewController from './SettingsViewController.js';
 import FontController from './FontController.js';
 import LayoutController from './LayoutController.js';
@@ -5,32 +6,31 @@ import ColorController from './ColorController.js';
 
 export default class SettingsController{
   constructor(){
+    new ArticleProgressController();
 
     this.settingsButton = document.querySelector('.articlePost .settingsButton');
-    if (this.settingsButton) {
-      this.settings = document.querySelector('.articlePost .settings');
-      this.settingsClose = this.settings.querySelector('.close');
+    this.settings = document.querySelector('.articlePost .settings');
+    this.settingsClose = this.settings.querySelector('.close');
 
-      this.move = this.move.bind(this);
-      this.end = this.end.bind(this);
-      this.update = this.update.bind(this);
+    this.move = this.move.bind(this);
+    this.end = this.end.bind(this);
+    this.update = this.update.bind(this);
 
-      this.dragging = false;
-      this.X = window.innerWidth - 15;
-      this.Y = 287;
-      this.settingsButtonWidth = this.settingsButton.clientWidth;
-      this.windowHeight = window.innerHeight;
-      this.windowWidth = window.innerWidth;
+    this.dragging = false;
+    this.X = window.innerWidth - 15;
+    this.Y = 287;
+    this.settingsButtonWidth = this.settingsButton.clientWidth;
+    this.windowHeight = window.innerHeight;
+    this.windowWidth = window.innerWidth;
 
-      this.setUpListener(this.settingsButton);
-      this.setUpListener(this.settingsClose);
-      this.setUpMoveListeners();
+    this.setUpListener(this.settingsButton);
+    this.setUpListener(this.settingsClose);
+    this.setUpMoveListeners();
 
-      new SettingsViewController();
-      new FontController();
-      new LayoutController();
-      new ColorController();
-    }
+    new SettingsViewController();
+    new FontController();
+    new LayoutController();
+    new ColorController();
   }
 
   setUpMoveListeners() {
