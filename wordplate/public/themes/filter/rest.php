@@ -24,9 +24,10 @@ function getUserProgress($data){
     return 0;
 }
 
-function saveUserProgress($data){
+function saveUserProgress($request){
     global $wpdb;
     $table_name = $wpdb->prefix . 'articleProgress';
+    $data = $request->get_params();
 
     $sanitizedCheck = $wpdb->prepare("SELECT * FROM $table_name WHERE article_id = %d AND user_id = %d", [$data['articleID'], $data['userID']]);
 
