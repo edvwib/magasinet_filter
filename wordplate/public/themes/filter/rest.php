@@ -6,8 +6,7 @@ add_action('rest_api_init', function () {
         'methods' => 'GET',
         'callback' => 'getUserProgress'
     ]);
-
-    register_rest_route('api/v1', '/saveUserProgress/(?P<articleID>\d+)/(?P<userID>\d+)/(?P<progress>\d{1,3})', [
+    register_rest_route('api/v1', '/saveUserProgress/', [
         'methods' => 'POST',
         'callback' => 'saveUserProgress'
     ]);
