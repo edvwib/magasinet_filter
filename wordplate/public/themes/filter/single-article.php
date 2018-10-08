@@ -22,7 +22,7 @@ get_header(); ?>
         >
     </div>
 
-    <article>
+    <article data-postID="<?= $post->ID; ?>" data-userID="<?= get_current_user_id(); ?>">
         <div class="metadata">
             <div class="title">
                 <h1><?php the_title(); ?></h1>

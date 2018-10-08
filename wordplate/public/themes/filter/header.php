@@ -20,5 +20,24 @@
             <div class="menuIcon">
                 <div class="icon"></div>
             </div>
+
+            <div class="menuDrawer">
+                <?php if (is_user_logged_in()): ?>
+                    <a href="<?= wp_logout_url('/'); ?>" class="menuItem btn logout">LOGGA UT</a>
+                <?php else: ?>
+                    <a href="#" class="menuItem btn login">LOGGA IN</a>
+                <?php endif; ?>
+
+                <div class="loginView">
+                    <div class="close"></div>
+                    <?php wp_login_form(); ?>
+                </div>
+                <a href="#" class="menuItem btn subscribe">BÖRJA PRENUMERERA</a>
+                <a href="#" class="menuItem">HEM</a>
+                <a href="#" class="menuItem">MAGASINET</a>
+                <a href="#" class="menuItem">FILTERBUBBLAN</a>
+                <a href="#" class="menuItem">HJÄLPCENTER</a>
+                <a href="#" class="menuItem">SHOP</a>
+            </div>
         </nav>
     </header>
