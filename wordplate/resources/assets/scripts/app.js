@@ -1,6 +1,7 @@
 'use strict';
 
-import SettingsController from './SettingsController.js';
+import MenuController from './MenuController.js';
+import SettingsController from './ArticleSettings/SettingsController.js';
 
 if (process.env.NODE_ENV === 'production') {
   // Check that service workers are registered
@@ -12,4 +13,5 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+new MenuController();
 document.querySelector('.articleContent') ? new SettingsController() : '';
