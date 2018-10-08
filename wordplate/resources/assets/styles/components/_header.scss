@@ -28,4 +28,69 @@ nav{
       background-size: contain;
     }
   }
+
+  .menuDrawer{
+    &.active{
+      transform: translateX(0);
+    }
+
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 64px;
+    width: 100%;
+    height: 100vh;
+    padding: 32px;
+    background-color: #E1AB99;
+
+    transform: translateX(100%);
+    transition: transform .25s;
+    will-change: transform;
+
+    display: flex;
+    flex-direction: column;
+
+    .menuItem{
+      color: #1A1A1A;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: .62px;
+      line-height: 26px;
+
+      &.btn{
+        color: #fff;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
+        padding: 15px;
+        margin: 5px 0;
+      }
+    }
+
+    .loginView{
+      &.active{
+        transform: translateX(0);
+      }
+      .close{
+        background-image: url('../../assets/img/articleSettings/settingsClose.svg');
+        height: 20px;
+        width: 20px;
+      }
+
+      position: fixed;
+      // z-index: 1;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      padding: 32px;
+      background-color: #E1AB99;
+
+      transform: translateX(100%);
+      transition: transform .25s;
+      will-change: transform;
+
+      #loginform{
+      }
+    }
+  }
 }
