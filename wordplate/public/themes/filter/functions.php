@@ -63,4 +63,22 @@ add_action('init', function () {
     require_once template_path('custom_fields/index.php');
     require_once template_path('custom_taxonomies/index.php');
     require_once template_path('custom_admin_cols/index.php');
+    require template_path('rest.php');
 });
+
+add_action("after_switch_theme", "create_user_article_progress_table");
+function create_user_article_progress_table() {
+    global $wpdb;
+    $charset_collate = $wpdb->get_charset_collate();
+    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+
+    $table_name = $wpdb->prefix . 'articleProgress';
+    $sql = "CREATE TABLE $table_name (
+        id INTEGER NOT NULL AUTO_INCREMENT,
+        user_id INTEGER NOT NULL,
+        article_id INTEGER NOT NULL,
+        progress INTEGER NOT NULL,
+        PRIMARY KEY (id)
+    ) $charset_collate;";
+    dbDelta($sql);
+}
