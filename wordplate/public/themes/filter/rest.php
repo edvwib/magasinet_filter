@@ -27,29 +27,36 @@ function getUserProgress($data){
 function saveUserProgress($request){
     global $wpdb;
     $table_name = $wpdb->prefix . 'articleProgress';
-    $data = $request->get_params();
+    $result;
 
-    $sanitizedCheck = $wpdb->prepare("SELECT * FROM $table_name WHERE article_id = %d AND user_id = %d", [$data['articleID'], $data['userID']]);
+    $articleID = intval($request['articleID']);
+    $userID = intval($request['userID']);
+    $progress = intval($request['progress']);
+
+    $sanitizedCheck = $wpdb->prepare("SELECT * FROM $table_name WHERE article_id = %d AND user_id = %d", [$articleID, $userID]);
 
     $check = $wpdb->get_results($sanitizedCheck);
 
     if ($check) {
-        return $wpdb->update(
-            $table_name,
-            ['progress' => $data['progress']],
-            [
-                'article_id' => $data['articleID'],
-                'user_id' => $data['userID']
-            ]
-        );
+        $result = $wpdb->query("UPDATE $table_name SET progress = $progress WHERE user_id = $userID AND article_id = $articleID");
+        // $result = $wpdb->update(
+        //     $table_name,
+        //     ['progress' => $progress],
+        //     [
+        //         'article_id' => $articleID,
+        //         'user_id' => $userID
+        //     ]
+        // );
     } else {
-        return $wpdb->insert(
-            $table_name,
-            [
-                'user_id' => $data['userID'],
-                'article_id' => $data['articleID'],
-                'progress' => $data['progress']
-            ]
-        );
+        $result = $wpdb->query("INSERT INTO $table_name (user_id, article_id, progress) VALUES($userID, $articleID, $progress)");
+        // $result = $wpdb->insert(
+        //     $table_name,
+        //     [
+        //         'user_id' => $userID,
+        //         'article_id' => $articleID,
+        //         'progress' => $progress
+        //     ]
+        // );
     }
+    return $result;
 }
