@@ -11,8 +11,8 @@ export default class ArticleProgressController{
 
     this.setUpEventListeners();
 
-    if(this.userID)
-      window.setInterval(this.saveProgressToDB.bind(this), 5000);
+    // if(this.userID)
+    //   window.setInterval(this.saveProgressToDB.bind(this), 5000);
 
     if(this.userID)
       this.getProgressFromDB();

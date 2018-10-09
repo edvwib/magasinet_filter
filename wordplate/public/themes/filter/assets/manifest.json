@@ -1,8 +1,8 @@
 {
   "name": "Magasinet Filter",
   "short_name": "Filter",
-  "theme_color": "#5ab10d",
-  "background_color": "#5ab10d",
+  "theme_color": "#1A1A1A",
+  "background_color": "#1A1A1A",
   "display": "standalone",
   "Scope": "/",
   "start_url": "/",

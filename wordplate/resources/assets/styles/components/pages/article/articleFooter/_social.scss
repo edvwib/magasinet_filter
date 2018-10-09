@@ -5,7 +5,7 @@
     min-height: 40px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
 
     a{
@@ -40,7 +40,7 @@
   }
   .mailUs{
     margin-bottom: 30px;
-    
+
     a{
       text-decoration: none;
       color: #1A1A1A;
