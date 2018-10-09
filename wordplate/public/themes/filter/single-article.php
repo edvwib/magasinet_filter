@@ -183,43 +183,75 @@ get_header(); ?>
             <span class="arrow"></span>
             <div class="related">
                 <div class="newMagazine">
-                    <h1>FRÅN NYA NUMMRET</h1>
-                    <div class="articles">
-                        <div class="article">
-                            <div class="img"></div>
-                            <h2>{{title here}}</h2>
-                        </div>
-                        <div class="article">
-                            <div class="img"></div>
-                            <h2>{{title here}}</h2>
-                        </div>
+                <?php
+                    $newPosts = get_posts([
+                        'numberposts' => 2,
+                        'post_type' => 'article',
+                        'orderBy' => 'date',
+                        'exclude' => [$post->id]
+                    ]);
+                    if ($newPosts): ?>
+                        <h1>FRÅN NYA NUMMRET</h1>
+                        <div class="articles">
+                        <?php foreach ($newPosts as $post): ?>
+                            <div class="article">
+                                <img src="<?= field('introduction_cover', $post->ID)['sizes']['medium']; ?>"></img>
+                                <h2><?= $post->post_title; ?></h2>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
+                    <?php endif; ?>
                 </div>
                 <div class="relevantTheme">
-                    <h1>{{theme here}}</h1>
-                    <div class="articles">
-                        <div class="article">
-                            <div class="img"></div>
-                            <h2>{{title here}}</h2>
-                        </div>
-                        <div class="article">
-                            <div class="img"></div>
-                            <h2>{{title here}}</h2>
-                        </div>
+                    <?php $theme = get_the_terms($post->id, 'article_theme')[0]; ?>
+                    <?php if ($theme):
+                        $themePosts = get_posts([
+                            'numberposts' => 2,
+                            'post_type' => 'article',
+                            'exclude' => [$post->id],
+                            'tax_query' => [
+                                'taxonomy' => 'article_theme',
+                                'field' => $theme->term_id,
+                                'terms' => $theme->name,
+                            ],
+                        ]);
+                    ?>
+                        <h1><?= $theme->name ?></h1>
+                        <div class="articles">
+                        <?php foreach ($themePosts as $post): ?>
+                            <div class="article">
+                                <img src="<?= field('introduction_cover', $post->ID)['sizes']['medium']; ?>"></img>
+                                <h2><?= $post->post_title; ?></h2>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
+                    <?php endif; ?>
                 </div>
                 <div class="relevantCategory">
-                    <h1>{{category here}}</h1>
-                    <div class="articles">
-                        <div class="article">
-                            <div class="img"></div>
-                            <h2>{{title here}}</h2>
-                        </div>
-                        <div class="article">
-                            <div class="img"></div>
-                            <h2>{{title here}}</h2>
-                        </div>
+                    <?php
+                        $category = get_the_terms($post->id, 'article_category')[0];
+                        $categoryPosts = get_posts([
+                            'numberposts' => 2,
+                            'post_type' => 'article',
+                            'exclude' => [$post->id],
+                            'tax_query' => [
+                                'taxonomy' => 'article_category',
+                                'field' => $category->term_id,
+                                'terms' => $category->name,
+                            ]
+                        ]);
+                    ?>
+                    <?php if ($categoryPosts): ?>
+                        <h1><?= $category->name ?></h1>
+                        <div class="articles">
+                        <?php foreach ($categoryPosts as $post): ?>
+                                <div class="article">
+                                    <img src="<?= field('introduction_cover', $post->ID)['sizes']['medium']; ?>"></img>
+                                    <h2><?= $post->post_title; ?></h2>
+                                </div>
+                        <?php endforeach; ?>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

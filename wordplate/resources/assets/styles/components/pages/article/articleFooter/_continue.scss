@@ -50,11 +50,10 @@
         width: 50%;
         margin-right: 8px;
 
-        .img{
+        img{
           height: 100px;
           width: 100%;
-
-          background-color: tomato;
+          object-fit: cover;
         }
       }
     }
