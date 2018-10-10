@@ -38,7 +38,7 @@ export default class ArticleProgressController{
 
   getPercent(){
     let percent = Math.floor((window.scrollY / (this.articleLength)) * 100);
-    return percent > 100 ? '0' : percent;
+    return percent > 100 ? '100' : percent;
   }
 
   setPercent(){
