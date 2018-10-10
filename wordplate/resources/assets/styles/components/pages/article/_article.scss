@@ -67,6 +67,14 @@
       letter-spacing: .41px;
       line-height: 32px;
       margin: 0 auto;
+
+      >p{
+        display: flex;
+        flex-direction: column;
+      }
+      img{
+        align-self: center;
+      }
     }
 
     .progress{
