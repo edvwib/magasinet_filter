@@ -71,6 +71,18 @@
       >p{
         display: flex;
         flex-direction: column;
+
+        >a{
+          border-radius: 5px;
+          background-color: $pink;
+          color: #fff;
+          box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
+          text-decoration: none;
+          font-family: Arial;
+          padding: 12px;
+          width: fit-content;
+          align-self: center;
+        }
       }
       img{
         align-self: center;
