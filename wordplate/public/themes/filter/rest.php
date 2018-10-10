@@ -1,4 +1,12 @@
 <?php
+
+/*
+ * This file is part of Filter.
+ * (c) Magasinet Filter, Offside Press AB.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 declare(strict_types=1);
 
 add_action('rest_api_init', function () {
@@ -12,19 +20,22 @@ add_action('rest_api_init', function () {
     ]);
 });
 
-function getUserProgress($data){
+function getUserProgress($data)
+{
     global $wpdb;
     $table_name = $wpdb->prefix . 'articleProgress';
     $sanitized = $wpdb->prepare("SELECT progress FROM $table_name WHERE article_id = %d AND user_id = %d", [$data['articleID'], $data['userID']]);
 
     $data = $wpdb->get_results($sanitized);
 
-    if ($data)
+    if ($data) {
         return intval($data[0]->progress);
+    }
     return 0;
 }
 
-function saveUserProgress($request){
+function saveUserProgress($request)
+{
     global $wpdb;
     $table_name = $wpdb->prefix . 'articleProgress';
     $result;
@@ -39,7 +50,7 @@ function saveUserProgress($request){
 
     if ($check) {
         $result = $wpdb->query("UPDATE $table_name SET progress = $progress WHERE user_id = $userID AND article_id = $articleID");
-        // $result = $wpdb->update(
+    // $result = $wpdb->update(
         //     $table_name,
         //     ['progress' => $progress],
         //     [
