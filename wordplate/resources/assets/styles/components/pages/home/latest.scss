@@ -1,0 +1,79 @@
+.latestMagazine{
+  >h1{
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: .62px;
+    line-height: 27px;
+
+    margin: 16px 0;
+  }
+  >h1, h3{
+    color: $pink;
+  }
+  .featured{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr;
+
+    >a{
+      >div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        background: linear-gradient(#ffffff00, #000000ff);
+        padding: 32px;
+
+        >*{
+          margin: 0;
+          font-family: 'Harriet Display Regular';
+        }
+      }
+
+      background-size: cover;
+      min-height: 350px;
+      text-decoration: none;
+      color: #fff;
+
+      .genre{
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: .75px;
+        line-height: 19px;
+        text-transform: uppercase;
+      }
+      h1{
+        margin-top: 8px;
+        font-size: 40px;
+        letter-spacing: 1.13px;
+        line-height: 49px;
+      }
+      .ingress{
+        margin: 16px 0;
+      }
+      .ingress, .metadata{
+        font-size: 19px;
+        font-weight: 500;
+        letter-spacing: .89px;
+        line-height: 26px;
+      }
+    }
+
+    .article{
+      flex: 2;
+    }
+    .filterBubblan{
+      flex: 1;
+      background-image: url(../../../../img/filterbubblan.jpg);
+
+      h1{
+        font-size: 144px;
+        font-weight: 500;
+        letter-spacing: 1.57px;
+        line-height: 175px;
+        hyphens: manual;
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 'use strict';
 
 import MenuController from './MenuController.js';
+import HomeController from './HomeController.js';
 import SettingsController from './ArticleSettings/SettingsController.js';
 
 if (process.env.NODE_ENV === 'production') {
@@ -14,4 +15,5 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 new MenuController();
+document.querySelector('.home') ? new HomeController() : '';
 document.querySelector('.articleContent') ? new SettingsController() : '';
