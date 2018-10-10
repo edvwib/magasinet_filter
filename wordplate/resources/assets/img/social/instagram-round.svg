@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_insta-round</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artikel-mobil-slutet" transform="translate(-241.000000, -1991.000000)" fill-rule="nonzero">
+            <g id="icon_insta-round" transform="translate(241.000000, 1991.000000)">
+                <circle id="Oval-5" stroke="#FFFFFF" stroke-width="1.5" cx="20" cy="20" r="19.25"></circle>
+                <g id="Group-5" transform="translate(9.000000, 9.000000)">
+                    <circle id="Oval-4" fill="#FFFFFF" cx="17.5" cy="4.5" r="1.5"></circle>
+                    <rect id="Rectangle" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="20" height="20" rx="5"></rect>
+                    <circle id="Oval-2" stroke="#FFFFFF" stroke-width="2" cx="11" cy="11" r="5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,15 +1,16 @@
 footer{
-  background-color: #1A1A1A;
+  background-color: $black;
   padding: 100px 32px 40px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
 
   .logo{
     height: 36px;
     margin-bottom: 53px;
     width: 100%;
-    max-width: 50%;
+    background-position: center;
     background-image: url('../../img/offsidePressFullLogo.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -20,6 +21,7 @@ footer{
     flex-flow: row wrap;
     justify-content: space-between;
     width: 100%;
+    max-width: 700px;
 
     a{
       font-size: 10px;
@@ -45,13 +47,13 @@ footer{
       background-repeat: no-repeat;
 
       &.twitter{
-        background-image: url('../../img/social/fb-round.svg');
+        background-image: url('../../img/social/twitter-round.svg');
       }
       &.facebook{
         background-image: url('../../img/social/fb-round.svg');
       }
       &.instagram{
-        background-image: url('../../img/social/fb-round.svg');
+        background-image: url('../../img/social/instagram-round.svg');
       }
     }
   }
