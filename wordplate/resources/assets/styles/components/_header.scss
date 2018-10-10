@@ -1,7 +1,7 @@
 nav{
   height: 64px;
   width: 100%;
-  background-color: #1A1A1A;
+  background-color: $black;
 
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,7 @@ nav{
     width: 100%;
     height: 100vh;
     padding: 32px;
-    background-color: #E1AB99;
+    background-color: $pink;
 
     transform: translateX(100%);
     transition: transform .25s;
@@ -51,7 +51,7 @@ nav{
     flex-direction: column;
 
     .menuItem{
-      color: #1A1A1A;
+      color: $black;
       text-decoration: none;
       font-size: 22px;
       font-weight: bold;
@@ -67,6 +67,9 @@ nav{
     }
 
     .loginView{
+      display: flex;
+      flex-direction: column;
+
       &.active{
         transform: translateX(0);
       }
@@ -74,6 +77,7 @@ nav{
         background-image: url('../../assets/img/articleSettings/settingsClose.svg');
         height: 20px;
         width: 20px;
+        align-self: flex-end;
       }
 
       position: fixed;
@@ -83,13 +87,37 @@ nav{
       width: 100%;
       height: 100vh;
       padding: 32px;
-      background-color: #E1AB99;
+      background-color: $pink;
 
       transform: translateX(100%);
       transition: transform .25s;
       will-change: transform;
 
       #loginform{
+        .login-username, .login-password{
+          input{
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+          }
+        }
+        .login-remember{
+
+        }
+        .login-submit input{
+          border: none;
+          border-radius: 6px;
+          width: 138px;
+          background-color: $black;
+          color: #fff;
+          padding: 7px 0;
+          margin-top: 8px;
+          box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
+
+          font-size: 17px;
+          letter-spacing: .33px;
+          line-height: 20px;
+        }
       }
     }
   }
