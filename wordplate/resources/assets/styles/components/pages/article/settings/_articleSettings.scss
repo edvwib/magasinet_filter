@@ -42,7 +42,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      background-color: #E1AB99;
+      background-color: $pink;
       padding: 10px 16px 0 16px;
       border-radius: 20px 20px 0 0;
       height: 40px;
@@ -70,7 +70,7 @@
         font-weight: bold;
         letter-spacing: .27px;
         line-height: 16px;
-        border-bottom: 2px solid #E1AB99;
+        border-bottom: 2px solid $pink;
       }
       .close{
         height: 18px;

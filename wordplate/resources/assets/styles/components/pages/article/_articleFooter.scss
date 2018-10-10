@@ -12,17 +12,17 @@
   .line{
     height: 4px;
     width: 85%;
-    background-color: #E1AB99;
+    background-color: $pink;
   }
   .arrow{
     width: 16px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 8px solid #E1AB99;
+    border-top: 8px solid $pink;
     margin-top: 12px;
   }
   p, .title{
-    color: #1A1A1A;
+    color: $black;
     text-align: center;
     font-family: Arial;
   }
