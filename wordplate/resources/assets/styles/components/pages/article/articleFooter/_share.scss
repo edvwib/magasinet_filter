@@ -3,7 +3,7 @@
 
   .intro{
     text-align: left;
-    margin: 12px 0 11px 0;
+    margin: 20px 0 11px 0;
   }
   input{
     border: none;
@@ -40,25 +40,24 @@
   }
   .info{
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    flex-flow: column nowrap;
     width: 100%;
 
     .shareCount{
       font-size: 10px;
       letter-spacing: 0.2px;
       line-height: 11px;
-      margin: 13px 0 8px 0;
-      margin-left: auto;
     }
     .infobutton{
+      position: relative;
+      top: -28px;
       background: none;
       border: none;
       background-image: url('../../../../../img/social/info.svg');
       background-repeat: no-repeat;
       height: 20px;
       width: 20px;
-      margin-left: auto;
+      align-self: flex-end;
     }
   }
 }
